@@ -1,6 +1,11 @@
 from six.moves import urllib
+import os
  
-infile = open("Cryptic_Fiction.m3u", "r")
+print("")
+
+dlist = input("Please enter the full file name of the text file to use as reference for downloads: ")
+
+infile = open(dlist, "r")
    
 contents = []
 
@@ -19,8 +24,11 @@ for y in range(x):
     print("")
     print("Downloading mp3 from: " + ur)
 
-    urb = "download" + str(y)
-    ur3 = '/Users/mysti/Downloads/' + urb + ".mp3"
+    filnam = os.path.basename(ur)
+
+    filnm = filnam.strip()
+
+    ur3 = '/Users/mysti/Downloads/' + filnm
 
     urllib.request.urlretrieve(ur, ur3)
 
