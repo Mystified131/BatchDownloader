@@ -1,11 +1,8 @@
 from six.moves import urllib
 import os
  
-print("")
 
-dlist = input("Please enter the full file name of the text file to use as reference for downloads: ")
-
-infile = open(dlist, "r")
+infile = open("ThisAmericanLife.txt", "r")
    
 contents = []
 
@@ -19,19 +16,28 @@ x = len(contents)
 
 for y in range(x):
 
-    ur = contents[y]
+    try:
 
-    print("")
-    print("Downloading mp3 from: " + ur)
+        ur = contents[y]
 
-    filnam = os.path.basename(ur)
+        print("")
+        print("Downloading mp3 from: " + ur)
 
-    filnm = 'This_American_Life_' + filnam.strip()
+        filnam = os.path.basename(ur)
 
-    ur3 = 'C:\\Users\\mysti\\Downloads\\' + filnm
+        filnm = 'This_American_Life_' + filnam.strip()
 
-    urllib.request.urlretrieve(ur, ur3)
+        ur3 = 'C:\\Users\\mysti\\Downloads\\' + filnm
 
+        urllib.request.urlretrieve(ur, ur3)
+
+    except:
+
+        print("Download failed for: ", ur)
+
+print("")
+
+print("Downloads finished, please check your downloads folder.")
 
 
   
