@@ -28,7 +28,7 @@ for y in range(x):
 
     filnm = filnam.strip()
 
-    ur3 = '/Users/mysti/Downloads/' + filnm
+    ur3 = 'C:\\Users\\mysti\\Downloads\\' + filnm
 
     urllib.request.urlretrieve(ur, ur3)
 
