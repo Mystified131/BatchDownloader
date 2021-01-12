@@ -59,19 +59,24 @@ for elem in contents:
 finpl = []
 
 for elem in pl1:
-    finpl.append(elem)
+    if elem not in finpl:
+        finpl.append(elem)
 
 for elem2 in pl2:
-    finpl.append(elem2)
+    if elem2 not in finpl:
+        finpl.append(elem2)
 
 for elem3 in pl3:
-    finpl.append(elem3)
+    if elem3 not in finpl:
+        finpl.append(elem3)
 
 for elem4 in pl4:
-    finpl.append(elem4)
+    if elem4 not in finpl:
+        finpl.append(elem4)
 
 for elem5 in pl5:
-    finpl.append(elem5)
+    if elem5 not in finpl:
+        finpl.append(elem5)
 
 oustr = "Shuffled_Playlist.txt"
 
